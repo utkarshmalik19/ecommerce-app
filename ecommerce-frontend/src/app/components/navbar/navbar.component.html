@@ -1,0 +1,6 @@
+<mat-toolbar color="primary">
+    <span routerLink="/">E Commerce App</span>
+    <button mat-button *ngIf="!isLoggedIn" routerLink="/signin" color="accent">Sign In</button>
+    <button mat-button *ngIf="!isLoggedIn" routerLink="/signup" color="accent">Sign Up</button>
+    <button mat-button *ngIf="isLoggedIn" (click)="logout()" color="accent">Logout</button>
+  </mat-toolbar>

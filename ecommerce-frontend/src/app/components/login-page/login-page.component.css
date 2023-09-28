@@ -1,0 +1,7 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    
+    
+    margin: 100px; /* Adjust the margin as needed */
+  }

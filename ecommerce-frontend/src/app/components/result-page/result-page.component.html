@@ -1,0 +1,44 @@
+<h2 class="form-heading">Search Results</h2>
+<button (click) = "logout()">Logout</button>
+<div class="filter-section">
+  <label for="filterType">Filter By:</label>
+  <select id="filterType" name="filterType" [(ngModel)]="selectedFilter">
+    <option value="productName">Name</option>
+    <option value="brandName">Brand</option>
+    <option value="price">Price</option>
+  </select>
+
+  <input type="text" id="filterValue" name="filterValue" [(ngModel)]="filterValue" (input)="applyFilter()" placeholder="Enter filter value">
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>Product Name</th>
+      <th>Brand Name</th>
+      <th>Price</th>
+      <th>Description</th>
+      <!-- <th>Average rating</th>
+      <th>Num of reviews</th> -->
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <div *ngIf="filteredResults.length ===0">
+      <p>No Results Found</p>
+    </div>
+    <tr *ngFor="let result of filteredResults">
+      <td>{{ result.productName }}</td>
+      <td>{{ result.brandName }}</td>
+      <td>{{ result.productPrice }}</td>
+      <td>{{ result.description }}</td>
+      <td>{{ result.category }}</td>
+      <!-- <td>{{ result.averageRating }}</td>
+      <td>{{ result.numberOfReviews }}</td> -->
+       <td>
+        <button mat-raised-button color="accent" class="add-review-button" (click)="addReview(result)">Add Review</button>
+        <button mat-raised-button color="primary" class="view-reviews-button" (click)="viewReviews(result)">View Reviews</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div *ngIf="error">{{error}}</div>

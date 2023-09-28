@@ -1,0 +1,20 @@
+/* Apply styles to the decorated search bar */
+.search-form {
+  align-items: center;
+
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.search-input {
+  flex: 1; /* Allow the input to expand and fill available space */
+  border: 1px solid #ccc; 
+  outline: none; 
+  margin-right: 20px;
+  width: 250px;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+

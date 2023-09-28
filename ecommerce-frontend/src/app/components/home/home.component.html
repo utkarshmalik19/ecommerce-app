@@ -1,0 +1,23 @@
+<h2 class="form-heading">Product Search</h2>
+<div class="search-form" *ngIf="isLoggedIn">
+  
+  <input type="text" required id="searchValue" name="searchValue" [(ngModel)]="searchValue" class="search-input">
+  
+  <button mat-raised-button color="accent" (click)="search()">Search</button>
+</div>
+
+ 
+  <div>
+    <h1>Product List</h1>
+    <ul>
+      <!-- Use *ngFor to iterate through the products array -->
+      <li *ngFor="let product of products">
+        <!-- Display product information -->
+        <h2>{{ product.productName }}</h2>
+        <p>Brand: {{ product.brandName }}</p>
+        <p>Category: {{ product.category }}</p>
+        <p>Price: ${{ product.productPrice }}</p>
+        <p>Description: {{ product.description }}</p>
+      </li>
+    </ul>
+  </div>
