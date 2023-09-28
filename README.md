@@ -17,7 +17,7 @@ A Full Stack E-commerce app built using Angular and Spring boot
 
 ## Prerequisites
 
-Before cloning the repositor, ensure you have met the following requirements:
+Before cloning the repository, ensure you have met the following requirements:
 
 - [Node.js](https://nodejs.org/) installed for the frontend.
 - [Java](https://www.java.com/) and [Maven](https://maven.apache.org/) for the backend.
