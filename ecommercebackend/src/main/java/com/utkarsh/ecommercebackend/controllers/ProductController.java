@@ -37,13 +37,13 @@ private ProductService productService;
 		product.setNumOfReviews(0);
 		product.setRating(0);
 		productService.addProduct(product);
-		return ResponseEntity.ok("Product Added Successfully");
+		return ResponseEntity.ok("{\"message\": \"Product Added Successfully\"}");
 	}
 	
 	@PostMapping("/product/delete/{productCode}")
 	public ResponseEntity<String> deleteProduct(@PathVariable int productCode){
 		productService.deleteProduct(productCode);
-		return ResponseEntity.ok("Product Deleted Successfully");
+		return ResponseEntity.ok("{\"message\": \"Product Deleted Successfully\"}");
 	}
 	
 	@GetMapping("/product/getall")
